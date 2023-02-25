@@ -1,0 +1,49 @@
+﻿<Window x:Class="TV_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TV_Project"
+        mc:Ignorable="d"
+        Title="TV Menu" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="207*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="MainMenu" 
+         Grid.Row="0"
+         Height="20">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Сохранить" Click="command_save"/>
+                <MenuItem Header="Загрузить" Click="command_load"/>
+                <MenuItem Header="Выход!" Click="command_exsit"/>
+            </MenuItem>
+            <MenuItem Header="Сортировка">
+                <MenuItem Header="Название" Click="command_sortBy_brand"/>
+                <MenuItem Header="Экран" Click="command_sortBy_screen"/>
+                <MenuItem Header="Цена" Click="command_sortBy_price"/>
+            </MenuItem>
+            <MenuItem Header="Управление">
+                <MenuItem Header="Добавить запись" Click="command_addTV_form_show"/>
+                <MenuItem Header="Изменить запись" Click="command_editTv_show_form"/>
+                <MenuItem Header="Удалить запись" Click="command_delete_tv"/>
+
+
+            </MenuItem>
+        </Menu>
+        
+        <DataGrid x:Name="DgMain" 
+         Grid.Row="1" 
+         AutoGenerateColumns ="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding = "{Binding Brand, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Экран" Binding = "{Binding Screen, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вертикаль" Binding = "{Binding Vertical, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Горизонталь" Binding = "{Binding Horizontal, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding ="{Binding Price, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding ="{Binding Type, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

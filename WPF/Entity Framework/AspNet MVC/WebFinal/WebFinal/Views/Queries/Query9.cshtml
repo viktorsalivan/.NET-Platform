@@ -1,0 +1,20 @@
+﻿@model List<WebFinal.ViewModels.Query9ViewModel>
+
+<h3 class="text-center">Какова для каждой породы разница между показателями породы и средними показателями по птицефабрике?</h3>
+
+<table class="table ">
+    <tr>
+        <th>Разница по весу</th>
+        <th>Разница по возрасту</th>
+        
+
+
+        @foreach (var item in Model)
+        {
+         <tr>
+            <td>@item.differenceWeight</td>
+            <td>@item.differenceEggs</td>
+         </tr>
+         }
+
+    </table>

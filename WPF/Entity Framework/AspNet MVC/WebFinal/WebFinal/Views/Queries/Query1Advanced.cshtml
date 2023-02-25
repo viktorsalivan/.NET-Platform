@@ -1,0 +1,20 @@
+﻿@model List<WebFinal.ViewModels.Query1AdvancedViewModel>
+
+<h3 class="text-center">Средняя производительность по каждой породе</h3>
+
+<table class="table ">
+    <tr>
+        <th>Название породы</th>
+        <th>СР.Количество</th>
+
+
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Cname</td>
+            <td>@item.AVG</td>
+        </tr>
+    }
+
+    </table>

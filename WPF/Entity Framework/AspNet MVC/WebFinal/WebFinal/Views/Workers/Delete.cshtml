@@ -1,0 +1,64 @@
+﻿@model WebFinal.Models.Worker
+
+@{
+    ViewBag.Title = "Удалить";
+}
+
+<h2>Удалить</h2>
+
+<h3>Вы уверены, что хотите удалить?</h3>
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurnameNP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurnameNP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pasport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pasport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Selary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Selary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkerStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkerStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workshop.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workshop.id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

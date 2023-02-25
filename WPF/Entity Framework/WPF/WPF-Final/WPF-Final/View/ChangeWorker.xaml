@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_Final.View.ChangeWorker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Final.View"
+        mc:Ignorable="d"
+        Title="ChangeWorker" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="74,43,68,48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="96,58,0,0" TextWrapping="Wrap" Text="SurnameNP:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbSurnameNP" HorizontalAlignment="Left" Margin="172,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Left" Margin="119,82,0,0" TextWrapping="Wrap" Text="Pasport:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbPasport" HorizontalAlignment="Left" Margin="172,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,112,0,0" TextWrapping="Wrap" Text="Selary:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbSelary" HorizontalAlignment="Left" Margin="172,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="95,139,0,0" TextWrapping="Wrap" Text="IdWorkshop:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbIdWorkshop" HorizontalAlignment="Left" Margin="172,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="90,160,0,0" TextWrapping="Wrap" Text="WorkerStatus:" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbWorkerStatus" HorizontalAlignment="Left" Margin="172,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnOK" Content="Принять" HorizontalAlignment="Left" Margin="171,219,0,0" VerticalAlignment="Top" Width="164" IsDefault="True" Click="btnOK_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="171,243,0,0" VerticalAlignment="Top" Width="164" IsCancel="True"/>
+    </Grid>
+</Window>

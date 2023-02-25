@@ -1,0 +1,20 @@
+﻿@model List<WebFinal.ViewModels.Query6ViewModel>
+
+<h3 class="text-center">В каком цехе находится курица, от которой получают больше всего яиц?</h3>
+
+<table class="table ">
+    <tr>
+        <th>Номер цеха </th>
+        <th>Количиство</th>
+
+
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.WorksShop</td>
+            <td>@item.MaXEgss</td>
+        </tr>
+    }
+
+    </table>

@@ -1,0 +1,20 @@
+﻿@model List<WebFinal.ViewModels.Query7ViewModel>
+
+<h3 class="text-center">Сколько кур каждой породы в каждом цехе?</h3>
+
+<table class="table ">
+    <tr>
+        <th>Название породы</th>
+        <th>Количество</th>
+
+
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Bname</td>
+            <td>@item.Ccount</td>
+        </tr>
+    }
+
+    </table>

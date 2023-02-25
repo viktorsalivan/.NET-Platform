@@ -1,0 +1,25 @@
+﻿<Window x:Class="TV_Project.View.addTV"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TV_Project.View"
+        mc:Ignorable="d"
+        Title="addTV" Height="391" Width="374" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid x:Name="MainGrid" AutomationProperties.IsOffscreenBehavior="Default">
+        <Label Content="Название" HorizontalAlignment="Left" Margin="20,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Диагональ " HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="Вертикаль" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="Горизонталь" HorizontalAlignment="Left" Margin="20,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="20,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="Тип" HorizontalAlignment="Left" Margin="20,190,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbBrand" HorizontalAlignment="Left" Margin="100,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="txbScreen" HorizontalAlignment="Left" Margin="100,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbVertical" HorizontalAlignment="Left" Margin="100,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbHorizontal" HorizontalAlignment="Left" Margin="100,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbPrice" HorizontalAlignment="Left" Margin="100,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbType" HorizontalAlignment="Left" Margin="100,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="addBtn" Content="Добавить" HorizontalAlignment="Left" Margin="100,222,0,0" VerticalAlignment="Top" Width="120" IsDefault="True" Click="addBtn_click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="100,252,0,0" VerticalAlignment="Top" Width="120" IsCancel="True"/>
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebFinal.Models.Worker>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Таблицы</h2>
+
+<p>
+    @Html.ActionLink("Создать новую", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SurnameNP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pasport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Selary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkerStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Workshop.id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurnameNP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pasport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Selary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkerStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Workshop.id)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Подробности", "Details", new { id = item.id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

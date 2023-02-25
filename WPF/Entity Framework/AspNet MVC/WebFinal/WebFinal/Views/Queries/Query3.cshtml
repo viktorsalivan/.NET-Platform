@@ -1,0 +1,56 @@
+﻿@model List<WebFinal.ViewModels.Query3ViewModel>
+<h3 class="text-center">В каких клетках находятся куры указанного возраста с заданным номером диеты?</h3>
+
+<br />
+@using (Html.BeginForm("Query3", "Queries", FormMethod.Post, new { @class = "form-group panel  center-block", @style = "border:1.5px solid black; border-radius: 13px; width: 300px;" }))
+{
+    <div class="form-horizontal">
+        <h2 class="text-center">Форма ввода</h2>
+        <hr />
+
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="width: 140px">Диета:</label>
+
+            <div class="col-md-11">
+                @Html.TextBox("tempDiet", null, new { @class = "form-control", placeholder = "1" })
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="width: 140px">Возраст:</label>
+
+            <div class="col-md-11">
+                @Html.TextBox("tempAge", null, new { @class = "form-control", placeholder = "3" })
+            </div>
+
+        </div>
+
+        <input type="submit" value="Запросить" class="btn btn-default center-block" />
+        <hr />
+    </div>
+}
+
+@if (IsPost && Model != null)
+{
+    <table class="table ">
+        <tr>
+            <th>Диета</th>
+            <th>Возраст</th>
+            <th>Номер Цеха</th>
+
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.BDiet</td>
+                <td>@item.CAge</td>
+                <td>@item.Idw</td>
+            </tr>
+        }
+
+        </table>
+    }

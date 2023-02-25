@@ -1,0 +1,20 @@
+﻿@model List<WebFinal.ViewModels.Query5ViewModel>
+
+<h3 class="text-center">Среднее количество яиц, которое получает в день каждый работник от обслуживаемых им кур?</h3>
+
+<table class="table ">
+    <tr>
+        <th>Данные работника</th>
+        <th>Среднее количество яиц</th>
+
+
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.SurNameNP</td>
+            <td>@item.AvgEgss</td>
+        </tr>
+    }
+
+    </table>

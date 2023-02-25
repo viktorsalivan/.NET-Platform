@@ -1,0 +1,40 @@
+﻿<h3 class="text-center">Сколько яиц в день приносят куры указанного работника?</h3>
+
+<br />
+@using (Html.BeginForm("Query4", "Queries", FormMethod.Post, new { @class = "form-group panel  center-block", @style = "border:1.5px solid black; border-radius: 13px; width: 300px;" }))
+{
+    <div class="form-horizontal">
+        <h2 class="text-center">Форма ввода</h2>
+        <hr />
+
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="width: 140px">Данные работника:</label>
+
+            <div class="col-md-11">
+                @Html.TextBox("tempName", null, new { @class = "form-control", placeholder = "Крылова Александра Захаровна" })
+            </div>
+
+        </div>
+
+
+        <input type="submit" value="Запросить" class="btn btn-default center-block" />
+        <hr />
+    </div>
+}
+
+@if (IsPost && Model != null)
+{
+    <table class="table ">
+        <tr>
+            
+            <th>Сумма</th>
+            <tr>
+                <td>@ViewBag.summa</td>
+            </tr>
+        
+
+        </table>
+    }

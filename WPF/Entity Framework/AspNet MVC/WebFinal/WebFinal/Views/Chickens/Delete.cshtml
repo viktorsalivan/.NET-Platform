@@ -1,0 +1,72 @@
+﻿@model WebFinal.Models.Chicken
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удалить</h2>
+
+<h3>Вы уверены, что хотите удалить?</h3>
+<div>
+    <h4>Chicken</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eggs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eggs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.SurnameNP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Worker.SurnameNP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workshop.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workshop.id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

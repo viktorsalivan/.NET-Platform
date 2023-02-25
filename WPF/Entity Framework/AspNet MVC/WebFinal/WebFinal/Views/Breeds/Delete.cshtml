@@ -1,0 +1,56 @@
+﻿@model WebFinal.Models.Breed
+
+@{
+    ViewBag.Title = "Удалить";
+}
+
+<h2>Удалить</h2>
+
+<h3>Вы уверены, что хотите удалить?</h3>
+<div>
+    <h4>Порода</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Avgeggs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Avgeggs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Avgweight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Avgweight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diet)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

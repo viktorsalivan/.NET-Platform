@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0f277496519141b5b36c447ce96e143f" Name="Diagram1">
+        <EntityTypeShape EntityType="FarmModel.Breed" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmModel.Chicken" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmModel.Report" Width="1.5" PointX="7.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmModel.Worker" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmModel.Workshop" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="FarmModel.FK_Chicken_Breed" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmModel.FK_Report_Breed" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmModel.FK_Chicken_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmModel.FK_Chicken_Workshop" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmModel.FK_Report_Chicken" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmModel.FK_Report_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmModel.FK_Worker_Workshop" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebFinal.Models.Chicken>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Таблицы</h2>
+
+<p>
+    @Html.ActionLink("Создать новую", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eggs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Breed.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Worker.SurnameNP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Workshop.id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eggs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Breed.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Worker.SurnameNP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Workshop.id)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Подробности", "Details", new { id=item.id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

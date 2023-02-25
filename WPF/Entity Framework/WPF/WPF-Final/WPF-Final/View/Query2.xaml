@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPF_Final.View.Query2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Final.View"
+        mc:Ignorable="d"
+        Title="Query2" Height="450" Width="800" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ResizeMode="NoResize" WindowState="Normal">
+    <Grid>
+        <TextBox x:Name="txbName" HorizontalAlignment="Left" Margin="278,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" ToolTip="Например: Крылова Александра Захаровна" Tag=""/>
+        <Button x:Name="BtnOK" Content="Найти!" HorizontalAlignment="Left" Margin="278,178,0,0" VerticalAlignment="Top" Width="200" Click="BtnOKClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="208,68,0,0" TextWrapping="Wrap" Text="В каком цехе наибольшее количество кур определенной породы?" VerticalAlignment="Top" Foreground="#FF4EFF00" Background="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="224,147,0,0" TextWrapping="Wrap" Text="Данные:" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF_Final.View.Query1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Final.View"
+        mc:Ignorable="d"
+        Title="Query1" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid>
+        <TextBox x:Name="txbName" HorizontalAlignment="Left" Margin="278,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="txbAge" HorizontalAlignment="Left" Margin="278,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="txbWeight" HorizontalAlignment="Left" Margin="278,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="BtnOK" Content="Найти!" HorizontalAlignment="Left" Margin="279,234,0,0" VerticalAlignment="Top" Width="200" Click="BtnOKClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="184,70,0,0" TextWrapping="Wrap" Text="Какое количество яиц получают от каждой курицы данного веса, породы, возраста?" VerticalAlignment="Top" Foreground="#FF4EFF00" Background="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="222,149,0,0" TextWrapping="Wrap" Text="Парода: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="222,177,0,0" TextWrapping="Wrap" Text="Возраст: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="243,203,0,0" TextWrapping="Wrap" Text="Вес: " VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

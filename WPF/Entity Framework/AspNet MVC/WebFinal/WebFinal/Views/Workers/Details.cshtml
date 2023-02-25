@@ -1,0 +1,58 @@
+﻿@model WebFinal.Models.Worker
+
+@{
+    ViewBag.Title = "Подробности";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurnameNP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurnameNP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pasport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pasport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Selary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Selary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkerStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkerStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workshop.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workshop.id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Назад", "Index")
+</p>

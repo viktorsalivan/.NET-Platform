@@ -1,0 +1,47 @@
+﻿@model List<WebFinal.ViewModels.Query2ViewModel>
+<h3 class="text-center">В каком цехе наибольшее количество кур определенной породы?</h3>
+
+<br />
+@using (Html.BeginForm("Query2", "Queries", FormMethod.Post, new { @class = "form-group panel  center-block", @style = "border:1.5px solid black; border-radius: 13px; width: 300px;" }))
+{
+    <div class="form-horizontal">
+        <h2 class="text-center">Форма ввода</h2>
+        <hr />
+
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2" style="width: 140px">Название породы:</label>
+
+            <div class="col-md-11">
+                @Html.TextBox("tempName", null, new { @class = "form-control", placeholder = "Загорская лососевая" })
+            </div>
+
+        </div>
+
+
+        <input type="submit" value="Запросить" class="btn btn-default center-block" />
+        <hr />
+    </div>
+}
+
+@if (IsPost && Model != null)
+{
+    <table class="table ">
+        <tr>
+            <th>Название породы</th>
+            <th>Номер Цеха</th>
+
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Bname</td>
+                <td>@item.MaxChicken</td>
+            </tr>
+        }
+
+        </table>
+    }
+

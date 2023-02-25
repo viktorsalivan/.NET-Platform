@@ -1,0 +1,66 @@
+﻿@model WebFinal.Models.Chicken
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Подробности</h2>
+
+<div>
+    <h4>Курица</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eggs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eggs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.SurnameNP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Worker.SurnameNP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workshop.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workshop.id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Назад", "Index")
+</p>
