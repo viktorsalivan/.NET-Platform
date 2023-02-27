@@ -1,0 +1,20 @@
+﻿<Window x:Class="SystemMainManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemMainManager"
+        mc:Ignorable="d"
+        Title="sysMain Manager" Height="315" Width="393" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="settings_online_web_pc_mac_monitor_icon-icons.com_59975.ico">
+    <Grid>
+
+        <CheckBox x:Name="cbApplicationprelaunch" Content="Applicationprelaunch" ToolTip="Предугадывание запуска приложений." HorizontalAlignment="Left" Margin="106,73,0,0" VerticalAlignment="Top" Height="20" IsChecked="True"/>
+        <CheckBox x:Name="cbApplicationlaunchprefetching" Content="Applicationlaunchprefetching" ToolTip="Системный префетчинг запуска приложений (Основной виновник нагрузки на диск и ЦП)." HorizontalAlignment="Left" Margin="106,93,0,0" VerticalAlignment="Top" Height="20" IsChecked="True"/>
+        <Button x:Name="btExit" Content="Выход!" HorizontalAlignment="Left" Margin="287,246,0,0" VerticalAlignment="Top" Width="75" Click="command_exit"/>
+        <Button x:Name="btStart" Content="Выполнить" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="75" Click="btStart_command"/>
+        <CheckBox x:Name="cbMemorycompression" Content="Memorycompression" ToolTip="Сжатие памяти." HorizontalAlignment="Left" Margin="106,113,0,0" VerticalAlignment="Top" Width="176"/>
+        <CheckBox x:Name="cbPagecombining" Content="Pagecombining" ToolTip="Объединение страниц памяти с одинаковым содержимым." HorizontalAlignment="Left" Margin="106,133,0,0" VerticalAlignment="Top" Width="176"/>
+        <CheckBox x:Name="cbOperationapi" Content="Operationapi" ToolTip="Предоставление другим приложениям доступа к superfecth через API." HorizontalAlignment="Left" Margin="106,153,0,0" VerticalAlignment="Top" Width="176"/>
+
+    </Grid>
+</Window>
